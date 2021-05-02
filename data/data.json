@@ -19,18 +19,6 @@
       "id": 3
     },
     {
-      "title": "Bhanu Money",
-      "details": "While JavaScript’s native date and time manipulation functions can cover all of our formatting needs, they can still be challenging to use. In many cases, external libraries can make our work easier, with more humane interfaces that are easier to integrate and work with.\n\nMoment.js is a great example. This very popular and easy-to-use library contains thousands of functions all aimed at date, time, and time zone formatting.\n\nHere are a few sample lines using Moment.js to manage time formatting",
-      "category": "money",
-      "id": 4
-    },
-    {
-      "title": "reminder",
-      "details": "While JavaScript’s native date and time manipulation functions can cover all of our formatting needs, they can still be challenging to use. In many cases, external libraries can make our work easier, with more humane interfaces that are easier to integrate and work with.\n",
-      "category": "reminders",
-      "id": 5
-    },
-    {
       "title": "green",
       "details": "While JavaScript’s native date and time manipulation functions can cover all of our formatting needs, they can still be challenging to use. \n\n",
       "category": "reminders",
