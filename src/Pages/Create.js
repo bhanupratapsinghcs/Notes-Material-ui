@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import { makeStyles } from '@material-ui/core'
+import { FormControl, FormControlLabel, FormLabel, makeStyles, Radio, RadioGroup } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles({
@@ -20,6 +20,7 @@ export default function Create() {
     const [details, setDetails] = useState("")
     const [titleError, setTitleError] = useState(false)
     const [detailsError, setDetailsError] = useState(false)
+    const [category, setCategory] = useState('todos')
     const handleSubmit = (e) => {
         e.preventDefault()
         setTitleError(false)
@@ -31,8 +32,8 @@ export default function Create() {
         if (details === '') {
             setDetailsError(true)
         }
-        if (title && details) {
-            console.log(title, details)
+        if (title && details && category) {
+            console.log(title, details, category)
         }
     }
 
@@ -71,6 +72,15 @@ export default function Create() {
                     required
                     error={detailsError}
                 />
+                <FormControl className={classes.field}>
+                    <FormLabel>Note Category</FormLabel>
+                    <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
+                        <FormControlLabel value='money' control={<Radio />} label="Money"></FormControlLabel>
+                        <FormControlLabel value='todos' control={<Radio />} label="Todos"></FormControlLabel>
+                        <FormControlLabel value='reminders' control={<Radio />} label="Reminders"></FormControlLabel>
+                        <FormControlLabel value='work' control={<Radio />} label="Work"></FormControlLabel>
+                    </RadioGroup>
+                </FormControl>
                 <Button
                     className={classes.btn}
                     type='submit'
@@ -81,6 +91,7 @@ export default function Create() {
                 >
                     Submit
                 </Button>
+
             </form>
 
 
