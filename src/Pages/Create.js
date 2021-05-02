@@ -41,7 +41,7 @@ export default function Create() {
         <Container>
             <Typography
                 className={classes.title}
-                variant='h6'
+                variant='h4'
                 component='h2'
                 gutterBottom
                 color='textSecondary'
