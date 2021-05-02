@@ -26,7 +26,7 @@ export default function Create() {
                 className={classes.btn}
                 onClick={() => console.log("Clicked")}
                 type='submit'
-                color='primary'
+                color='secondary'
                 variant='contained'
                 // startIcon={<SendIcon />}
                 endIcon={<KeyboardArrowRightIcon />}
