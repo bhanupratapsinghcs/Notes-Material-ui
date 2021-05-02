@@ -1,5 +1,5 @@
 import { AppBar, Drawer, List, ListItem, ListItemIcon, ListItemText, makeStyles, Toolbar, Typography, Avatar } from '@material-ui/core'
-import { SubjectOutlined } from '@material-ui/icons';
+import { AddCircleOutlineRounded, SubjectOutlined } from '@material-ui/icons';
 import React from 'react'
 import { useHistory, useLocation } from 'react-router';
 
@@ -54,7 +54,7 @@ export default function Layout({ children }) {
         },
         {
             text: "Create Notes",
-            icon: <SubjectOutlined color='secondary' />,
+            icon: <AddCircleOutlineRounded color='secondary' />,
             path: '/create'
         }
     ]
