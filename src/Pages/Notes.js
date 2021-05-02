@@ -1,9 +1,30 @@
+import { Container, Grid, Paper } from '@material-ui/core'
 import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 export default function Notes() {
+
+    const [notes, setNotes] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:8000/notes')
+            .then(res => res.json())
+            .then(data => setNotes(data))
+    }, [])
     return (
-        <div>
-            Notes Page
-        </div>
+        <Container>
+            <Grid container>
+                {
+                    notes.map(note => (
+                        <Grid item key={note.id} xs={12} md={6} lg={4}>
+                            <Paper>
+                                {note.title}
+                            </Paper>
+                        </Grid>
+                    ))
+                }
+            </Grid>
+        </Container>
     )
 }
